@@ -72,8 +72,8 @@ This system empowers retail businesses to make data-driven decisions by combinin
 **1. Clone the repository**
 
 ```bash
-git clone <your-repository-url>
-cd <your-repository-folder>
+git clone https://github.com/nareshkumart07/AI-Powered-Sales-Analyzer-And-Forecasting-Tool
+cd https://github.com/nareshkumart07/AI-Powered-Sales-Analyzer-And-Forecasting-Tool
 ```
 
 **2. Create a virtual environment**
