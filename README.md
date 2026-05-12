@@ -11,6 +11,12 @@
   <img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" alt="License">
 </p>
 
+<p>
+  <a href="https://stock-price-predictor-pfanlcjgg4bt2uef7zzppl.streamlit.app/" target="_blank">
+    <img src="https://img.shields.io/badge/🚀%20Live%20Demo-Click%20Here-FF4B4B?style=for-the-badge&logo=streamlit" alt="Live Demo">
+  </a>
+</p>
+
 </div>
 
 ---
@@ -73,7 +79,7 @@ This system empowers retail businesses to make data-driven decisions by combinin
 
 ```bash
 git clone https://github.com/nareshkumart07/AI-Powered-Sales-Analyzer-And-Forecasting-Tool
-cd https://github.com/nareshkumart07/AI-Powered-Sales-Analyzer-And-Forecasting-Tool
+cd AI-Powered-Sales-Analyzer-And-Forecasting-Tool
 ```
 
 **2. Create a virtual environment**
@@ -115,5 +121,5 @@ Streamlit Cloud will automatically install dependencies from `requirements.txt` 
 ---
 
 <div align="center">
-  <sub>Built with Streamlit · Pytorch · scikit-learn · Plotly</sub>
+  <sub>Built with Streamlit · PyTorch · scikit-learn · Plotly</sub>
 </div>
