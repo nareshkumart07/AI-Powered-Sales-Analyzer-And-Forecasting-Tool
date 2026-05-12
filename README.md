@@ -115,5 +115,5 @@ Streamlit Cloud will automatically install dependencies from `requirements.txt` 
 ---
 
 <div align="center">
-  <sub>Built with Streamlit · TensorFlow/Keras · scikit-learn · Plotly</sub>
+  <sub>Built with Streamlit · Pytorch · scikit-learn · Plotly</sub>
 </div>
