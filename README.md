@@ -5,10 +5,9 @@
 <p>A comprehensive, multi-page Streamlit dashboard for retail sales analysis — clean data, segment customers, forecast demand using deep learning, and receive AI-driven pricing recommendations.</p>
 
 <p>
-  <img src="https://img.shields.io/badge/Python-3.8+-blue?style=flat-square&logo=python" alt="Python">
+  <img src="https://img.shields.io/badge/Python-3.11-blue?style=flat-square&logo=python" alt="Python">
   <img src="https://img.shields.io/badge/Streamlit-Dashboard-FF4B4B?style=flat-square&logo=streamlit" alt="Streamlit">
   <img src="https://img.shields.io/badge/Deep%20Learning-LSTM%20%7C%20GRU-purple?style=flat-square" alt="Deep Learning">
-  <img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" alt="License">
 </p>
 
 <p>
@@ -52,16 +51,19 @@ This system empowers retail businesses to make data-driven decisions by combinin
 
 ## Project Structure
 
-```
-📦 project-root/
-├── app.py                    # Main entry point — UI layout & tab routing
-├── data_processing.py        # Data loading, cleaning & preprocessing pipeline
-├── eda.py                    # Business overview tab functions
-├── customer_segmentation.py  # RFM & K-Means segmentation logic
-├── forecasting.py            # LSTM & GRU model pipeline
-├── dynamic_pricing.py        # Price simulation & revenue optimization
-├── utils.py                  # Shared utilities & plot color palette
-└── requirements.txt          # Python dependencies
+```text
+project-root/
+├── src/
+│   ├── app.py                    # Streamlit entry point
+│   ├── data_processing.py        # Loading and preprocessing
+│   ├── eda.py                    # Sales analysis
+│   ├── customer_segmentation.py  # RFM and K-Means
+│   ├── forecasting.py            # LSTM and GRU forecasting
+│   ├── dynamic_pricing.py        # Pricing simulations
+│   └── utilities.py              # Shared presentation utilities
+├── retail_sample_2000.xlsx       # Small example upload
+├── competitor_prices.csv        # Optional competitor input
+└── requirements.txt             # Dependencies used by root setup
 ```
 
 ---
@@ -70,7 +72,7 @@ This system empowers retail businesses to make data-driven decisions by combinin
 
 ### Prerequisites
 
-- Python **3.8** or newer
+- Python **3.11** (matches the included development container)
 - Git
 
 ### Steps
@@ -99,24 +101,36 @@ pip install -r requirements.txt
 **4. Run the application**
 
 ```bash
-streamlit run app.py
+python -m streamlit run src/app.py
 ```
 
-The app will open in your browser at `http://localhost:8501`.
+The app will open in your browser at `http://localhost:8501`. Run the command from the repository root.
+
+### Try the included sample
+
+Upload `retail_sample_2000.xlsx` in the sidebar, then select **Prepare My Data**. Explore the overview and customer segmentation tabs before training a forecast. Uploaded CSV/XLSX files need these exact columns: `Invoice`, `StockCode`, `Description`, `Quantity`, `InvoiceDate`, `Price`, `Customer ID`, and `Country`.
+
+The sample is intended for a quick walkthrough; forecast quality depends on the amount and continuity of history for the selected product.
 
 ---
 
 ## Deployment
 
-This project is ready for deployment on **Streamlit Community Cloud**.
+To configure **Streamlit Community Cloud**, use the repository root for dependencies and `src/app.py` as the entry point. Validate installation and resource limits in your deployment environment before sharing an application demo.
 
 | Step | Action |
 |------|--------|
 | 1. Push to GitHub | Upload all `.py` files and `requirements.txt` to a public repository |
 | 2. Connect | Sign in at [share.streamlit.io](https://share.streamlit.io) with your GitHub account |
-| 3. Deploy | Click **New app** → select your repository → set main file to `app.py` → click **Deploy!** |
+| 3. Deploy | Click **New app** → select your repository → set main file to `src/app.py` → click **Deploy!** |
 
 Streamlit Cloud will automatically install dependencies from `requirements.txt` and host the app at a shareable URL.
+
+## Evaluation and limitations
+
+This is an applied ML portfolio project. Forecasts and pricing simulations are experimental outputs, not proven business outcomes. For a defensible case study, record the data period, product selection, preprocessing, chronological train/test split, and model-versus-naive-baseline metrics. This repository does not establish a validated revenue improvement.
+
+Dependencies are currently unpinned. A full clean-environment installation and end-to-end forecast run are still required for reproducibility. No license file is currently included; a license choice should be confirmed before representing the repository as MIT-licensed.
 
 ---
 
