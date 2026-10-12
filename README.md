@@ -12,8 +12,8 @@
 </p>
 
 <p>
-  <a href="https://stock-price-predictor-pfanlcjgg4bt2uef7zzppl.streamlit.app/" target="_blank">
-    <img src="https://img.shields.io/badge/🚀%20Live%20Demo-Click%20Here-FF4B4B?style=for-the-badge&logo=streamlit" alt="Live Demo">
+  <a href="https://www.linkedin.com/feed/update/urn:li:activity:7372159137675202561/" target="_blank">
+    Watch the Retailytics project walkthrough
   </a>
 </p>
 
